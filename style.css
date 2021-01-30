@@ -128,10 +128,17 @@ a.active {
 	font-family: 'Bebas Neue', cursive;
 	font-weight: 400;
 	margin-bottom: 25px;
+	text-shadow: 4px 4px 0px #bd00ff;
 }
 
 .booking-content p {
-	margin-bottom: 25px;
+	margin-bottom: 50px;
+	background-color: #bd00ff;
+	word-spacing: 1px;
+	padding: 20px;
+	color: #eeeeee;
+	text-indent: 95px;
+	border-left: 10px solid #1400ff;
 }
 
 .btn-style {

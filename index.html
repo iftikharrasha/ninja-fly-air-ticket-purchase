@@ -80,7 +80,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p>$<span id="sub-total">250</span></p>
                     </div>
                 </div>
 
@@ -89,7 +89,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p>$<span id="vat-amount">25</span></p>
                     </div>
                 </div>
                 <hr>
@@ -98,7 +98,7 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p>$<span id="grand-total">275</span></p>
                     </div>
                 </div>
             </div>
@@ -107,7 +107,8 @@
 
         <div class="booking-content">
             <h1>welcome to blissfull<br>indulgence</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis quibusdam doloribus quidem officia vero. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, deleniti.
+            </p>
             <a href="#" class="learn">Learn More</a>
         </div>
     </main>
@@ -135,7 +136,29 @@
             }
            
             document.getElementById(idName + "-class-price").innerText = classPrice;
+
+            calculateSubTotal();
         }
+
+        function calculateSubTotal(){
+            const classCount = getInputValue("first");
+            const economyCount = getInputValue("economy");
+
+            const subTotal = classCount * 150 + economyCount * 100;
+            document.getElementById("sub-total").innerText = subTotal;
+
+            const vat = Math.round(subTotal * 0.1);
+            document.getElementById("vat-amount").innerText = vat;
+
+            const grandTotal = subTotal - vat;
+            document.getElementById("grand-total").innerText = grandTotal;
+        }
+
+        function getInputValue(ticket){
+         const ticketInput = document.getElementById(ticket + "-class-input");
+         const ticketCount = parseInt(ticketInput.value);
+         return ticketCount;
+      }
     </script>
 </body>
 
