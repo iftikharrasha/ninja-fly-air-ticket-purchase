@@ -42,11 +42,16 @@ nav ul li a {
 	padding: 5px;
 }
 
-nav ul li a:hover,
-a.active {
-	background-color: #3352f2;
+nav ul li a.active {
+	background-color: #1400ff;
 	border-radius: 5px;
+	padding: 10px;
 }
+
+nav ul li a:hover {
+	background-color: #bd00ff;
+}
+
 .main-content {
 	display: grid;
 	grid-template-columns: 2fr 3fr;
@@ -178,4 +183,41 @@ a.active {
 	color: white;
 	box-shadow: 8px 8px 0px 1px black;
 	text-decoration: none;
+}
+
+#success-area {
+	display: none;
+}
+
+.invoice-title {
+	overflow: hidden;
+}
+
+#main-title {
+	width: 65%;
+	float: left;
+}
+
+#main-title h4 {
+	float: left;
+}
+
+#date {
+	width: 30%;
+}
+
+.invoice-table {
+	width: 90%;
+	text-align: center;
+	padding: 20px 0;
+	background-color: #bd00ff;
+	word-spacing: 1px;
+	color: #eeeeee;
+	border-left: 10px solid #1400ff;
+	margin: 20px 0;
+}
+
+.table-title {
+	color: #1400ff;
+	font-weight: bold;
 }
