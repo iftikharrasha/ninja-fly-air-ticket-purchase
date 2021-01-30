@@ -138,12 +138,12 @@ nav ul li a:hover {
 
 .booking-content p {
 	margin-bottom: 50px;
-	background-color: #bd00ff;
+	background-color: #00000030;
 	word-spacing: 1px;
 	padding: 20px;
 	color: #eeeeee;
 	text-indent: 95px;
-	border-left: 10px solid #1400ff;
+	border-left: 10px solid #000000;
 }
 
 .btn-style {
@@ -207,17 +207,25 @@ nav ul li a:hover {
 }
 
 .invoice-table {
-	width: 90%;
-	text-align: center;
+	width: 95%;
+	text-align: left;
 	padding: 20px 0;
-	background-color: #bd00ff;
+	background-color: #00000030;
 	word-spacing: 1px;
 	color: #eeeeee;
-	border-left: 10px solid #1400ff;
+	border-left: 10px solid #000000;
 	margin: 20px 0;
 }
 
+td {
+	padding-left: 20px;
+}
+
 .table-title {
-	color: #1400ff;
+	color: black;
 	font-weight: bold;
+}
+
+.total-custom {
+	padding-top: 20px;
 }

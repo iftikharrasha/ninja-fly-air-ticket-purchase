@@ -121,31 +121,35 @@
                     <span>#48272</span>
                   </div>
                   
-                  <span id="date">Date: 16/02/2019</span>
+                  <span id="date">Departure: 30/01/2021</span>
                 </div>
                 
                 <div class="invoice-details">
                   <table class="invoice-table">
                     <thead>
                       <tr class="table-title">
-                        <td>Ticket</td>
-                        <td>PRICE</td>
+                        <td>From</td>
+                        <td>To</td>
+                        <td>Return</td>
                       </tr>
                     </thead>
                     
                     <tbody>
+                      <tr>
+                        <td>Dhaka, Bangladesh</td>
+                        <td>New York, USA</td>
+                        <td>14/02/2021</td>
+                      </tr>
                       
                       <tr>
-                        <td>Total</td>
+                        <td class="total-custom" colspan="2">Total</td>
                         <td>$<span id="booked-total">275</span></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                
-                <div class="invoice-footer">
+
                   <a class="learn" class="btn btn-primary">PAY NOW</a>
-                </div>
               </div>
         </div>
     </main>
@@ -187,7 +191,7 @@
             const vat = Math.round(subTotal * 0.1);
             document.getElementById("vat-amount").innerText = vat;
 
-            const grandTotal = subTotal - vat;
+            const grandTotal = subTotal + vat;
             document.getElementById("grand-total").innerText = grandTotal;
             document.getElementById("booked-total").innerText = grandTotal;
         }
